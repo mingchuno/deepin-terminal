@@ -1837,10 +1837,10 @@ class TerminalGrid(gtk.VBox):
         self.is_parent = True
         self.remove(self.terminal)
         width, height = self.get_child_requisition()
-        if split_policy == TerminalGrid.SPLIT_VERTICALLY:
+        if split_policy == TerminalGrid.SPLIT_HORIZONTALLY:
             self.paned = VPaned()
             self.paned.set_position(height/2)
-        elif split_policy == TerminalGrid.SPLIT_HORIZONTALLY:
+        elif split_policy == TerminalGrid.SPLIT_VERTICALLY:
             self.paned = HPaned()
             self.paned.set_position(width/2)
 
